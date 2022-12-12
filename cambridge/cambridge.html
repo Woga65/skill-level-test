@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Ajax request - Cambridge</title>
+     <link rel="stylesheet" href="css/fonts.css">
+     <link rel="stylesheet" href="css/global-styles.css">
+     <link rel="stylesheet" href="css/form.css">
+     <script type="text/javascript" src="js/cambridge.js"></script> 
+  </head>
+
+  <body class="main" tabindex=0 >
+    <main id="top" class="main">
+
+        <section id="ajax" class="ajax">
+            <div class="ajax-container base-margin top-margin bottom-margin">
+                <div class="ajax-heading">
+                    <h2>Cambridge - Ajax Request</h2>
+                    <p>Send a text to an endpoint, receive and display the result.</p>
+                </div>
+      
+                <div class="form-container container">
+                    <form id="ajax-form" class="ajax-form">
+      
+                        <div class="field-container container">
+                            <div>
+                                <label for="message">Message</label>
+                            </div>
+                            <div>
+                                <textarea id="message" class="form-field" name="message" required rows="7" placeholder="Write your message">According to a researcher at Cambridge University, it doesn't matter in what order the letters in a word are, the only important thing is that the first and last letter be at the right place. The rest can be a total mess and you can still read it without problem. This is because the human mind does not read every letter by itself but the word as a whole.</textarea>
+                                <div class="hint">
+                                    Please write something
+                                </div>
+                            </div>
+                        </div>
+      
+                        <div class="submit-container container">
+                            <button name="prevent-enter-submit" id="prevent-enter-submit" type="submit" style="display: none;" onclick="return false;">
+                            <button name="submit-button" id="submit-button" class="submit-button" type="submit">
+                                Send
+                            </button>
+                        </div>
+      
+                    </form>
+                </div>
+      
+            </div>
+        </section>
+
+    </main>
+  </body>
+</html>

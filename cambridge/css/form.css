@@ -1,0 +1,152 @@
+.ajax {
+  position: relative;
+  background-color: var(--secondary-bgr);
+  min-height: 100vh;
+}
+
+.ajax-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: calc(var(--font-size) * 8);
+}
+
+.ajax-heading h2 {
+  color: var(--secondary-accent);
+}
+
+.ajax-heading p {
+  margin-top: calc(var(--font-size) * .5);
+}
+
+.ajax-form,
+.ajax-heading {
+  margin-left: calc(var(--font-size) * .5);
+  margin-right: calc(var(--font-size) * .5);
+}
+
+.form-container {
+  margin-top: calc(var(--font-size) * 2.5);
+}
+
+.ajax-form .field-container {
+  margin-bottom: calc(var(--font-size) * 1);
+}
+
+.ajax-form .field-container div {
+  position: relative;
+}
+
+.ajax-form .submit-container {
+  margin-top: calc(var(--font-size) * 2);
+}
+
+.ajax-form .form-field {
+  width: 100%;
+  padding: calc(var(--font-size) * .6) calc(var(--font-size) * .6);
+  background-color: var(--primary-bgr);
+  color: var(--primary-color);
+  border: none;
+  outline-color: var(--secondary-accent-invisible);
+  margin-top: calc(var(--font-size) * 1);
+}
+
+.ajax-form .form-field:focus {
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: var(--secondary-accent);
+  transition: all 125ms ease-in-out;
+  -webkit-transition: all 125ms ease-in-out;
+}
+
+.ajax-form textarea {
+  /*height: calc(var(--font-size) * 8);*/
+  resize: vertical;
+}
+
+.ajax-form .field-container .hint {
+    position: absolute;
+    top: calc(var(--font-size) * .375);
+    color: red;
+    font-size: calc(var(--font-size) * .8);
+    left: calc(var(--font-size) * .6);
+    width: fit-content;
+    background: linear-gradient(180deg, var(--secondary-bgr), var(--primary-bgr));
+    padding-right: calc(var(--font-size) * .2);
+    display: none;
+}
+
+.ajax-form .field-container .invalid {
+  outline: 1px solid red;
+}
+
+.ajax-form .field-container .invalid ~ .hint {
+  display: block;
+}
+
+.ajax-form .submit-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ajax-form .submit-button {
+  border: 2px solid var(--secondary-accent);
+  color: var(--secondary-accent);
+  padding: calc(var(--font-size) * 1.15) calc(var(--font-size) * 3.8);
+  outline-color: var(--secondary-accent-invisible);
+  transition: all 125ms ease-in-out;
+  -webkit-transition: all 125ms ease-in-out;
+}
+
+.ajax-form .submit-button:hover {
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: var(--secondary-accent);
+  border-radius: calc(var(--font-size) * .5);
+  background-color: var(--primary-bgr-translucent);
+}
+
+.ajax-form .submit-button:focus {
+  box-shadow: 0px 0px 0px 2px;
+  border-radius: calc(var(--font-size) * .5);
+  background-color: var(--primary-bgr-translucent);
+}
+
+
+
+@media only screen and (min-width: 675px) {
+  .ajax-form,
+  .ajax-heading {
+    margin-left: calc(var(--font-size) * 2);
+    margin-right: calc(var(--font-size) * 2);
+  }
+  .ajax-heading h2 {
+    font-size: calc(var(--font-size) * 4);
+    line-height: calc(var(--font-size) * 5.625);
+  }
+}
+
+@media only screen and (min-width: 948px) {
+  .ajax-form,
+  .ajax-heading {
+    margin-left: calc(var(--font-size) * 4);
+    margin-right: calc(var(--font-size) * 4);
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .ajax-form,
+  .ajax-heading {
+    margin-left: calc(var(--font-size) * 6);
+    margin-right: calc(var(--font-size) * 6);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .ajax-form,
+  .ajax-heading {
+    margin-left: calc(var(--font-size) * 6);
+    margin-right: calc(var(--font-size) * 6);
+  }
+}

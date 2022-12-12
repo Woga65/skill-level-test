@@ -1,0 +1,145 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+:root {
+    --font-size: 1rem;
+    --primary-font: 'Roboto';
+    --secondary-font: 'Raleway';
+    --header-height: 5.375;
+    --scroll-margin: 5.375;
+    --primary-bgr: #1a1a1a;
+    --primary-bgr-translucent: #1a1a1a80;
+    --secondary-bgr: #000000;
+    --secondary-bgr-translucent: #000000f0;
+    --primary-color: #f0f0f0;
+    --primary-color-opaque: #f0f0f0ff;
+    --primary-color-translucent: #f0f0f080;
+    --primary-color-less-translucent: #f0f0f0a0;
+    --primary-color-invisible: #f0f0f000;
+    --secondary-color: #ffffff;
+    --primary-accent: #fa2759;
+    --secondary-accent: #2dfcd8;
+    --secondary-accent-translucent: #2dfcd8a0;
+    --secondary-accent-invisible: #2dfcd800;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul, li, p {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button, a {
+  background: none;
+  color: var(--primary-color);
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  margin: calc(var(--font-size) * 3.32) 0;
+}
+
+h1, h1 p, h1 span {
+  font-size: calc(var(--font-size) * 4);
+  font-weight: 700;
+  line-height: calc(var(--font-size) * 5.625);
+  font-family: var(--primary-font);
+}
+
+h2 {
+  font-size: calc(var(--font-size) * 2);
+  font-weight: 700;
+  font-family: var(--primary-font);
+/*line-height: calc(var(--font-size) * 5.625);*/
+}
+
+p {
+  font-size: calc(var(--font-size) * 1);
+  font-weight: 400;
+  line-height: calc(var(--font-size) * 1.75);
+  font-family: var(--primary-font);
+}
+
+button, label, input, textarea {
+  font-size: calc(var(--font-size) * 1.125);
+}
+
+button {
+  font-family: var(--secondary-font);
+}
+
+label, input, textarea, .hint {
+  font-family: var(--primary-font);
+}
+
+
+.primary-accent {
+  color: var(--primary-accent);
+}
+
+.secondary-accent {
+  color: var(--secondary-accent);
+}
+
+.container {
+  width: 100%;
+}
+
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: var(--secondary-bgr);
+  color: var(--primary-color);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+@media only screen and (min-width: 380px) {
+  h1, h1 p, h1 span {
+    font-size: calc(var(--font-size) * 4);
+    font-weight: 700;
+    line-height: calc(var(--font-size) * 5.625);
+  }
+
+  h2 {
+    font-size: calc(var(--font-size) * 2.25);
+    font-weight: 700;
+  }
+
+  p {
+    font-size: calc(var(--font-size) * 1.125);
+    font-weight: 400;
+    line-height: calc(var(--font-size) * 1.75);
+  }
+
+  button, label, input, textarea {
+    font-size: calc(var(--font-size) * 1.125);
+  }
+}
+
+@media only screen and (min-height: 1025px) {
+  section {
+    min-height: 812px;
+  }
+}
