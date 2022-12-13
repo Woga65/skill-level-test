@@ -27,7 +27,7 @@
     $im = imagecreatetruecolor($width, $height);
     $white = imagecolorallocate($im, 255, 255, 255);
     
-    for ($i = 0; $i < intdiv($height, $fieldWidth) + 1; $i+=1) {
+    for ($i = 0; $i < intdiv($height, $fieldWidth) + 1; $i++) {
         for ($j = ($i % 2) ? 1 : 0; $j < intdiv($width, $fieldWidth) + 1; $j+=2) {
             imagefilledrectangle($im, $j * $fieldWidth, $i * $fieldWidth, ($j * $fieldWidth) + $fieldWidth - 1, ($i * $fieldWidth) + $fieldWidth - 1, $white);
         }
