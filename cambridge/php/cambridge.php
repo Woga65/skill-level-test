@@ -13,7 +13,7 @@ switch($_SERVER['REQUEST_METHOD']) {
         $params = json_decode($json);
         if ($params && property_exists($params, 'message')) {
             $cambridge = new Cambridge($params->message);
-            $text = $cambridge->scramble();
+            $text = $cambridge->scramble();                 //$text = $cambridge->scrambleAlternative();    //alternative scrambling pattern
             $jsonResult = [
                 "err" => "",
                 "ok" => true,
