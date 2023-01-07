@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.type == 'blur') {
         isDirty[i] = ff.value ? true : false;
       }
-      !ff.value || !isDirty[i] ? ff.classList.toggle('invalid', false) : ff.classList.toggle('invalid', !ff.checkValidity());
+      !ff.value || !isDirty[i]
+        ? ff.classList.toggle('invalid', false)
+        : ff.classList.toggle('invalid', !ff.checkValidity());
     }));
   });
 
@@ -25,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   submit.addEventListener('click', e => {
     let invalidField = null;
     formFields.forEach(ff => {
-      invalidField = ff.required ? (ff.checkValidity() ? invalidField :  invalidField ? invalidField : ff) : invalidField;
+      invalidField = ff.required
+        ? (ff.checkValidity() ? invalidField : invalidField ? invalidField : ff)
+        : invalidField;
       ff.classList.toggle('invalid', !ff.checkValidity());
     });
     if (invalidField) {
